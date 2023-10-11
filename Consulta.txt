@@ -1,0 +1,210 @@
+
+{
+    "atividade_principal": [
+        {
+            "code": "64.22-1-00",
+            "text": "Bancos múltiplos, com carteira comercial"
+        }
+    ],
+    "data_situacao": "03\/11\/2005",
+    "fantasia": "DIRECAO GERAL",
+    "complemento": "ANDAR T I SL S101 A S1602 T II SL C101 A C1602 TIII SL N101 A 
+N1602",
+    "tipo": "MATRIZ",
+    "nome": "BANCO DO BRASIL SA",
+    "efr": "UNIÃO",
+    "abertura": "01\/08\/1966",
+    "telefone": "(61) 3493-9002",
+    "email": "secex@bb.com.br",
+    "atividades_secundarias": [
+        {
+            "code": "64.99-9-99",
+            "text": "Outras atividades de serviços financeiros não especificadas 
+anteriormente"
+        }
+    ],
+    "qsa": [
+        {
+            "nome": "FELIPE GUIMARAES GEISSLER PRINCE",
+            "qual": "10-Diretor"
+        },
+        {
+            "nome": "RAFAEL MACHADO GIOVANELLA",
+            "qual": "10-Diretor"
+        },
+        {
+            "nome": "KELLY TATIANE MARTINS QUIRINO",
+            "qual": "08-Conselheiro de Administração"
+        },
+        {
+            "nome": "LUCIANO MATARAZZO REGNO",
+            "qual": "10-Diretor"
+        },
+        {
+            "nome": "ROSIANE BARBOSA LAVIOLA",
+            "qual": "10-Diretor"
+        },
+        {
+            "nome": "KAMILLO TONONI OLIVEIRA SILVA",
+            "qual": "10-Diretor"
+        },
+        {
+            "nome": "ALBERTO MARTINHAGO VIEIRA",
+            "qual": "10-Diretor"
+        },
+        {
+            "nome": "LUCINEIA POSSAR",
+            "qual": "10-Diretor"
+        },
+        {
+            "nome": "GUSTAVO GARCIA LELLIS",
+            "qual": "10-Diretor"
+        },
+        {
+            "nome": "MARISA REGHINI FERREIRA MATTOS",
+            "qual": "10-Diretor"
+        },
+        {
+            "nome": "MARCO GEOVANNE TOBIAS DA SILVA",
+            "qual": "10-Diretor"
+        },
+        {
+            "nome": "JOSE RICARDO SASSERON",
+            "qual": "10-Diretor"
+        },
+        {
+            "nome": "TARCIANA PAULA GOMES MEDEIROS",
+            "qual": "16-Presidente"
+        },
+        {
+            "nome": "THIAGO AFFONSO BORSARI",
+            "qual": "10-Diretor"
+        },
+        {
+            "nome": "NEUDSON PERES DE FREITAS",
+            "qual": "10-Diretor"
+        },
+        {
+            "nome": "EDUARDO CESAR PASA",
+            "qual": "10-Diretor"
+        },
+        {
+            "nome": "JOAO VAGNES DE MOURA SILVA",
+            "qual": "10-Diretor"
+        },
+        {
+            "nome": "RODRIGO COSTA VASCONCELOS",
+            "qual": "10-Diretor"
+        },
+        {
+            "nome": "JOAO FRANCISCO FRUET JUNIOR",
+            "qual": "10-Diretor"
+        },
+        {
+            "nome": "LARISSA DA SILVA NOVAIS VIEIRA",
+            "qual": "10-Diretor"
+        },
+        {
+            "nome": "RODRIGO MULINARI",
+            "qual": "10-Diretor"
+        },
+        {
+            "nome": "PAULA SAYAO CARVALHO ARAUJO",
+            "qual": "10-Diretor"
+        },
+        {
+            "nome": "ANTONIO CARLOS WAGNER CHIARELLO",
+            "qual": "10-Diretor"
+        },
+        {
+            "nome": "ROBERT JUENEMANN",
+            "qual": "08-Conselheiro de Administração"
+        },
+        {
+            "nome": "ANELIZE LENZI RUAS DE ALMEIDA",
+            "qual": "08-Conselheiro de Administração"
+        },
+        {
+            "nome": "ALAN CARLOS GUEDES DE OLIVEIRA",
+            "qual": "10-Diretor"
+        },
+        {
+            "nome": "FRANCISCO AUGUSTO LASSALVIA",
+            "qual": "10-Diretor"
+        },
+        {
+            "nome": "ANA CRISTINA ROSA GARCIA",
+            "qual": "10-Diretor"
+        },
+        {
+            "nome": "EULER ANTONIO LUZ MATHIAS",
+            "qual": "10-Diretor"
+        },
+        {
+            "nome": "PEDRO BRAMONT",
+            "qual": "10-Diretor"
+        },
+        {
+            "nome": "MARIANA PIRES DIAS",
+            "qual": "10-Diretor"
+        },
+        {
+            "nome": "JULIO CESAR VEZZARO",
+            "qual": "10-Diretor"
+        },
+        {
+            "nome": "PAULO ROBERTO SIMAO BIJOS",
+            "qual": "08-Conselheiro de Administração"
+        },
+        {
+            "nome": "DARIO CARNEVALLI DURIGAN",
+            "qual": "08-Conselheiro de Administração"
+        },
+        {
+            "nome": "JAYME PINTO JUNIOR",
+            "qual": "10-Diretor"
+        },
+        {
+            "nome": "CARLA NESI",
+            "qual": "10-Diretor"
+        },
+        {
+            "nome": "MARCELO GASPARINO DA SILVA",
+            "qual": "08-Conselheiro de Administração"
+        },
+        {
+            "nome": "ELISA VIEIRA LEONEL",
+            "qual": "08-Conselheiro de Administração"
+        },
+        {
+            "nome": "GABRIEL MURICCA GALIPOLO",
+            "qual": "08-Conselheiro de Administração"
+        },
+        {
+            "nome": "LUIZ GUSTAVO BRAZ LAGE",
+            "qual": "10-Diretor"
+        }
+    ],
+    "situacao": "ATIVA",
+    "bairro": "ASA NORTE",
+    "logradouro": "Q SAUN QUADRA 5 BLOCO B TORRE I, II, III",
+    "numero": "SN",
+    "cep": "70.040-912",
+    "municipio": "BRASILIA",
+    "porte": "DEMAIS",
+    "natureza_juridica": "203-8 - Sociedade de Economia Mista",
+    "uf": "DF",
+    "cnpj": "00.000.000\/0001-91",
+    "ultima_atualizacao": "2023-10-10T18:44:55.455Z",
+    "status": "OK",
+    "motivo_situacao": "",
+    "situacao_especial": "",
+    "data_situacao_especial": "",
+    "capital_social": "120000000000.00",
+    "extra": {
+    },
+    "billing": {
+        "free": true,
+        "database": true
+    }
+}

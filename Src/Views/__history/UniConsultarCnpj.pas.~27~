@@ -1,0 +1,118 @@
+unit UniConsultarCnpj;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, ShellAPI, StdCtrls, ExtCtrls, Buttons;
+
+type
+  TFrmConsultarCnpj = class(TForm)
+    Conteudo: TPanel;
+    lblInserir: TLabel;
+    Shape1: TShape;
+    Edit1: TEdit;
+    Shape2: TShape;
+    BotaoConsultar: TSpeedButton;
+    Shape3: TShape;
+    BtnNovaConsulta: TSpeedButton;
+    Shape4: TShape;
+    Shape5: TShape;
+    btnSair: TSpeedButton;
+    Memo1: TMemo;
+    procedure BotaoConsultarClick(Sender: TObject);
+    procedure BtnNovaConsultaClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure btnSairClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    procedure LerInformacoes;
+    procedure LimparArquivo(const FilePath: string);
+  end;
+
+var
+  FrmConsultarCnpj: TFrmConsultarCnpj;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFrmConsultarCnpj.FormShow(Sender: TObject);
+begin
+Edit1.SetFocus;
+end;
+
+function ExecutarProgramaNoModoSilencioso(const ExeName, CmdLine: string): DWORD;
+var
+  InfoProcesso: TProcessInformation;
+  InfoEntrada: TStartupInfo;
+begin
+  FillChar(InfoEntrada, SizeOf(InfoEntrada), 0); //Boas praticas iniciar as variaveis com 0
+  InfoEntrada.cb := SizeOf(InfoEntrada);  //Definindo Tamanho da estrutura InfoEntrada
+  InfoEntrada.dwFlags := STARTF_USESHOWWINDOW;
+  InfoEntrada.wShowWindow := SW_HIDE; // Execute o programa em modo oculto
+
+  if not CreateProcess(PChar(ExeName), PChar(CmdLine), nil, nil, False, 0, nil, nil, InfoEntrada, InfoProcesso) then
+    raise Exception.CreateFmt('Erro ao executar o programa %s. Código: %d', [ExeName, GetLastError]);
+
+  WaitForSingleObject(InfoProcesso.hProcess, INFINITE); // Espere o programa externo finalizar
+
+  GetExitCodeProcess(InfoProcesso.hProcess, Result); // Pega o código de saída
+
+  CloseHandle(InfoProcesso.hProcess);  //Boa Pratica
+  CloseHandle(InfoProcesso.hThread);   //fechar esses Processos
+end;
+
+// Uso:
+procedure TFrmConsultarCnpj.BotaoConsultarClick(Sender: TObject);
+begin
+    LimparArquivo('C:\Users\DevSimbolus\Desktop\Projeto Gestao\Consulta.txt'); // ou ExcluirArquivo
+
+    ExecutarProgramaNoModoSilencioso('C:\Users\DevSimbolus\Desktop\Projeto Gestao\cnpj\project1.exe', '"' + 'C:\Users\DevSimbolus\Desktop\cnpj\Projeto Gestao\project1.exe' + '" ' + Edit1.Text);
+
+    LerInformacoes;
+end;
+
+procedure TFrmConsultarCnpj.LerInformacoes;
+var
+   arq: TStringList;
+begin
+ try
+  arq := TStringList.Create;
+  arq.LoadFromFile('C:\Users\DevSimbolus\Desktop\Projeto Gestao\Consulta.txt');
+
+  Memo1.Lines.Add(arq[2]);
+except
+  on E: Exception do
+    ShowMessage('Erro ao carregar o arquivo: ' + E.Message);
+end
+end;
+
+procedure TFrmConsultarCnpj.LimparArquivo(const FilePath: string);
+var
+  FileStream: TFileStream;
+begin
+  FileStream := TFileStream.Create(FilePath, fmCreate);
+  try
+    // Isso criará ou sobrescreverá o arquivo com tamanho zero.
+  finally
+    FileStream.Free;
+  end
+end;
+
+procedure TFrmConsultarCnpj.BtnNovaConsultaClick(Sender: TObject);
+begin
+  Edit1.Clear;
+  Memo1.Clear;
+end;
+
+procedure TFrmConsultarCnpj.btnSairClick(Sender: TObject);
+begin
+Close;
+end;
+
+end.
+
+

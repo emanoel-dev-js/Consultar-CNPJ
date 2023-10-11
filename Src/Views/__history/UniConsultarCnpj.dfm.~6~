@@ -1,0 +1,173 @@
+object FrmConsultarCnpj: TFrmConsultarCnpj
+  Left = 0
+  Top = 0
+  BorderStyle = bsNone
+  Caption = 'FrmConsultarCnpj'
+  ClientHeight = 522
+  ClientWidth = 833
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Conteudo: TPanel
+    Left = 0
+    Top = 0
+    Width = 833
+    Height = 522
+    Align = alClient
+    Color = 5395026
+    ParentBackground = False
+    TabOrder = 0
+    ExplicitTop = 8
+    ExplicitWidth = 868
+    ExplicitHeight = 536
+    object lblInserir: TLabel
+      Left = 16
+      Top = 40
+      Width = 354
+      Height = 37
+      Caption = 'Insira o CNPJ para consulta:'
+      Color = clWhite
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -27
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Shape1: TShape
+      Left = 16
+      Top = 83
+      Width = 793
+      Height = 62
+      Pen.Mode = pmMaskPenNot
+      Pen.Width = 2
+      Shape = stRoundRect
+    end
+    object Shape2: TShape
+      Left = 9
+      Top = 452
+      Width = 82
+      Height = 49
+      Pen.Color = clGreen
+      Pen.Width = 55
+      Shape = stRoundRect
+    end
+    object BotaoConsultar: TSpeedButton
+      Left = 19
+      Top = 459
+      Width = 64
+      Height = 37
+      Caption = 'Consultar'
+      Flat = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+      OnClick = BotaoConsultarClick
+    end
+    object Shape3: TShape
+      Left = 97
+      Top = 452
+      Width = 104
+      Height = 49
+      Pen.Color = 2135244
+      Pen.Width = 55
+      Shape = stRoundRect
+    end
+    object BtnNovaConsulta: TSpeedButton
+      Left = 97
+      Top = 459
+      Width = 104
+      Height = 37
+      Caption = 'Nova Consultar'
+      Flat = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+      OnClick = BtnNovaConsultaClick
+    end
+    object Shape4: TShape
+      Left = 16
+      Top = 160
+      Width = 793
+      Height = 265
+      Pen.Mode = pmMaskPenNot
+      Pen.Width = 2
+      Shape = stRoundRect
+    end
+    object Shape5: TShape
+      Left = 207
+      Top = 452
+      Width = 82
+      Height = 49
+      Pen.Color = clMaroon
+      Pen.Width = 55
+      Shape = stRoundRect
+    end
+    object btnSair: TSpeedButton
+      Left = 217
+      Top = 458
+      Width = 64
+      Height = 37
+      Caption = 'Sair '
+      Flat = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+      OnClick = btnSairClick
+    end
+    object Memo1: TMemo
+      Left = 32
+      Top = 176
+      Width = 761
+      Height = 233
+      BevelInner = bvNone
+      BevelOuter = bvNone
+      Color = clScrollBar
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      Lines.Strings = (
+        '')
+      ParentFont = False
+      ScrollBars = ssVertical
+      TabOrder = 0
+    end
+    object Edit1: TEdit
+      Left = 22
+      Top = 89
+      Width = 780
+      Height = 54
+      Align = alCustom
+      Alignment = taCenter
+      BevelOuter = bvNone
+      Color = clScrollBar
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -27
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+    end
+  end
+end

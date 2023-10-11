@@ -1,0 +1,79 @@
+unit cnpj;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, REST.Types, REST.Client, Data.Bind.Components,
+  Data.Bind.ObjectScope, Vcl.ExtCtrls;
+
+type
+  TForm1 = class(TForm)
+    RESTClient1: TRESTClient;
+    RESTRequest1: TRESTRequest;
+    RESTResponse1: TRESTResponse;
+    Panel1: TPanel;
+    memo: TMemo;
+    Edit1: TEdit;
+    PESQUISAR1: TButton;
+    Label1: TLabel;
+    Button1: TButton;
+    procedure PESQUISAR1Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+    procedure SalvarArquivo;
+  end;
+
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+
+end;
+
+// PESQUISAR1Click(nil);
+procedure TForm1.PESQUISAR1Click(Sender: TObject);
+VAR
+  CNPJ: string;
+begin
+  if ParamCount = 0 then
+  begin
+    CNPJ := ParamStr(1);
+    memo.Clear;
+    RESTClient1.BaseURL := 'https://receitaws.com.br/v1/cnpj/' + CNPJ;
+    RESTRequest1.Execute;
+    memo.Lines.Add(RESTRequest1.Response.JSONText);
+    SalvarArquivo;
+  end;
+  // form1.Free;
+end;
+
+procedure TForm1.SalvarArquivo;
+var
+  ArquivoTexto: TStringList;
+begin
+  ArquivoTexto := TStringList.Create;
+  try
+    ArquivoTexto.Assign(Memo.Lines);
+    ArquivoTexto.SaveToFile('C:\Users\DevSimbolus\Desktop\PastaConsulta\Consulta.txt');
+  finally
+    ArquivoTexto.Free;
+    FreeAndNil(Form1);
+  end;
+end;
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+close;
+end;
+end.

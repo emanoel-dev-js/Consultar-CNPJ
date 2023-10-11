@@ -1,0 +1,536 @@
+object FrmConsultarCnpj: TFrmConsultarCnpj
+  Left = 0
+  Top = 0
+  BorderStyle = bsNone
+  Caption = 'FrmConsultarCnpj'
+  ClientHeight = 832
+  ClientWidth = 837
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Conteudo: TPanel
+    Left = 0
+    Top = 0
+    Width = 837
+    Height = 832
+    Align = alClient
+    Color = 5395026
+    ParentBackground = False
+    TabOrder = 0
+    ExplicitWidth = 884
+    object lblInserir: TLabel
+      Left = 16
+      Top = 40
+      Width = 354
+      Height = 37
+      Caption = 'Insira o CNPJ para consulta:'
+      Color = clWhite
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -27
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Shape1: TShape
+      Left = 16
+      Top = 83
+      Width = 793
+      Height = 62
+      Pen.Mode = pmMaskPenNot
+      Pen.Width = 2
+      Shape = stRoundRect
+    end
+    object Shape2: TShape
+      Left = 12
+      Top = 778
+      Width = 82
+      Height = 49
+      Pen.Color = clGreen
+      Pen.Width = 55
+      Shape = stRoundRect
+    end
+    object BotaoConsultar: TSpeedButton
+      Left = 22
+      Top = 783
+      Width = 64
+      Height = 37
+      Caption = 'Consultar'
+      Flat = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+      OnClick = BotaoConsultarClick
+    end
+    object Shape3: TShape
+      Left = 100
+      Top = 778
+      Width = 104
+      Height = 49
+      Pen.Color = 2135244
+      Pen.Width = 55
+      Shape = stRoundRect
+    end
+    object BtnNovaConsulta: TSpeedButton
+      Left = 100
+      Top = 783
+      Width = 104
+      Height = 37
+      Caption = 'Nova Consultar'
+      Flat = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+      OnClick = BtnNovaConsultaClick
+    end
+    object Shape4: TShape
+      Left = 16
+      Top = 691
+      Width = 793
+      Height = 54
+      Pen.Mode = pmMaskPenNot
+      Pen.Width = 2
+      Shape = stRoundRect
+    end
+    object Shape5: TShape
+      Left = 210
+      Top = 778
+      Width = 82
+      Height = 49
+      Pen.Color = clMaroon
+      Pen.Width = 55
+      Shape = stRoundRect
+    end
+    object btnSair: TSpeedButton
+      Left = 221
+      Top = 783
+      Width = 64
+      Height = 37
+      Caption = 'Sair '
+      Flat = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWhite
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+      OnClick = btnSairClick
+    end
+    object Shape6: TShape
+      Left = 16
+      Top = 160
+      Width = 794
+      Height = 513
+      Pen.Mode = pmMaskPenNot
+      Pen.Width = 2
+      Shape = stRoundRect
+    end
+    object Memo1: TMemo
+      Left = 29
+      Top = 701
+      Width = 772
+      Height = 37
+      BevelInner = bvNone
+      BevelOuter = bvNone
+      Color = clScrollBar
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      Lines.Strings = (
+        '')
+      ParentFont = False
+      ScrollBars = ssVertical
+      TabOrder = 0
+    end
+    object edtcnpj: TMaskEdit
+      Left = 22
+      Top = 89
+      Width = 773
+      Height = 51
+      Alignment = taCenter
+      EditMask = ' 99.999.999/9999-99;1;_'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -37
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
+      MaxLength = 19
+      ParentFont = False
+      TabOrder = 1
+      Text = '   .   .   /    -  '
+    end
+    object pnldados: TPanel
+      Left = 49
+      Top = 187
+      Width = 736
+      Height = 456
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 2
+      Visible = False
+      object Label2: TLabel
+        Left = 8
+        Top = 13
+        Width = 118
+        Height = 16
+        Caption = 'N'#250'mero de Inscri'#231#227'o'
+      end
+      object Label3: TLabel
+        Left = 177
+        Top = 13
+        Width = 98
+        Height = 16
+        Caption = 'Data de Abertura'
+      end
+      object Label4: TLabel
+        Left = 8
+        Top = 61
+        Width = 105
+        Height = 16
+        Caption = 'Nome Empresarial'
+      end
+      object Label5: TLabel
+        Left = 367
+        Top = 61
+        Width = 103
+        Height = 16
+        Caption = 'Nome de Fantasia'
+      end
+      object Label6: TLabel
+        Left = 632
+        Top = 13
+        Width = 30
+        Height = 16
+        Caption = 'Porte'
+      end
+      object Label7: TLabel
+        Left = 8
+        Top = 112
+        Width = 300
+        Height = 16
+        Caption = 'C'#243'digo e Descri'#231#227'o da Atividade Econ'#244'mica Prim'#225'ria'
+      end
+      object Label8: TLabel
+        Left = 367
+        Top = 112
+        Width = 316
+        Height = 16
+        Caption = 'C'#243'digo e Descri'#231#227'o da Atividade Econ'#244'mica Secund'#225'ria'
+      end
+      object Label9: TLabel
+        Left = 8
+        Top = 161
+        Width = 211
+        Height = 16
+        Caption = 'C'#243'digo e Descri'#231#227'o Natureza Jur'#237'dica'
+      end
+      object Label1: TLabel
+        Left = 367
+        Top = 161
+        Width = 65
+        Height = 16
+        Caption = 'Logradouro'
+      end
+      object Label10: TLabel
+        Left = 8
+        Top = 210
+        Width = 45
+        Height = 16
+        Caption = 'N'#250'mero'
+      end
+      object Label11: TLabel
+        Left = 72
+        Top = 210
+        Width = 79
+        Height = 16
+        Caption = 'Complemento'
+      end
+      object Label12: TLabel
+        Left = 367
+        Top = 210
+        Width = 22
+        Height = 16
+        Caption = 'Cep'
+      end
+      object Label13: TLabel
+        Left = 491
+        Top = 210
+        Width = 79
+        Height = 16
+        Caption = 'Bairro/Distrito'
+      end
+      object Label14: TLabel
+        Left = 8
+        Top = 302
+        Width = 53
+        Height = 16
+        Caption = 'Munic'#237'pio'
+      end
+      object Label15: TLabel
+        Left = 367
+        Top = 256
+        Width = 15
+        Height = 16
+        Caption = 'UF'
+      end
+      object Label16: TLabel
+        Left = 407
+        Top = 256
+        Width = 158
+        Height = 16
+        Caption = 'Endere'#231'o Eletr'#244'nico (Email)'
+      end
+      object Label17: TLabel
+        Left = 8
+        Top = 346
+        Width = 200
+        Height = 16
+        Caption = 'Ente Federativo Respons'#225'vel (EFR)'
+      end
+      object Label18: TLabel
+        Left = 367
+        Top = 300
+        Width = 107
+        Height = 16
+        Caption = 'Situa'#231#227'o Cadastral'
+      end
+      object Label19: TLabel
+        Left = 320
+        Top = 13
+        Width = 137
+        Height = 16
+        Caption = 'Data Situa'#231#227'o Cadastral'
+      end
+      object Label20: TLabel
+        Left = 8
+        Top = 394
+        Width = 166
+        Height = 16
+        Caption = 'Motivo de Situa'#231#227'o Cadastral'
+      end
+      object Label21: TLabel
+        Left = 367
+        Top = 351
+        Width = 99
+        Height = 16
+        Caption = 'Situa'#231#227'o Especial'
+      end
+      object Label22: TLabel
+        Left = 472
+        Top = 13
+        Width = 129
+        Height = 16
+        Caption = 'Data Situa'#231#227'o Especial'
+      end
+      object Label23: TLabel
+        Left = 8
+        Top = 255
+        Width = 50
+        Height = 16
+        Caption = 'Telefone'
+      end
+      object redtcnpj: TEdit
+        Left = 8
+        Top = 31
+        Width = 163
+        Height = 24
+        CharCase = ecUpperCase
+        TabOrder = 0
+      end
+      object edtdataabertura: TEdit
+        Left = 177
+        Top = 31
+        Width = 137
+        Height = 24
+        TabOrder = 1
+      end
+      object edtnomeempresarial: TEdit
+        Left = 8
+        Top = 81
+        Width = 353
+        Height = 24
+        CharCase = ecUpperCase
+        TabOrder = 2
+      end
+      object edtfantasia: TEdit
+        Left = 367
+        Top = 81
+        Width = 353
+        Height = 24
+        CharCase = ecUpperCase
+        TabOrder = 3
+      end
+      object edtporte: TEdit
+        Left = 632
+        Top = 31
+        Width = 88
+        Height = 24
+        CharCase = ecUpperCase
+        TabOrder = 4
+      end
+      object edtprimaria: TEdit
+        Left = 8
+        Top = 131
+        Width = 353
+        Height = 24
+        CharCase = ecUpperCase
+        TabOrder = 5
+      end
+      object edtsecundaria: TEdit
+        Left = 367
+        Top = 131
+        Width = 353
+        Height = 24
+        CharCase = ecUpperCase
+        TabOrder = 6
+      end
+      object edtnatjuridica: TEdit
+        Left = 8
+        Top = 180
+        Width = 353
+        Height = 24
+        CharCase = ecUpperCase
+        TabOrder = 7
+      end
+      object edtlogradouro: TEdit
+        Left = 367
+        Top = 180
+        Width = 353
+        Height = 24
+        CharCase = ecUpperCase
+        TabOrder = 8
+      end
+      object edtnumero: TEdit
+        Left = 8
+        Top = 227
+        Width = 58
+        Height = 24
+        CharCase = ecUpperCase
+        TabOrder = 9
+      end
+      object edtcomplemento: TEdit
+        Left = 72
+        Top = 227
+        Width = 289
+        Height = 24
+        CharCase = ecUpperCase
+        TabOrder = 10
+      end
+      object edtcep: TEdit
+        Left = 367
+        Top = 227
+        Width = 118
+        Height = 24
+        CharCase = ecUpperCase
+        TabOrder = 11
+      end
+      object edtbairro: TEdit
+        Left = 491
+        Top = 227
+        Width = 229
+        Height = 24
+        CharCase = ecUpperCase
+        TabOrder = 12
+      end
+      object edtmunicipio: TEdit
+        Left = 8
+        Top = 319
+        Width = 353
+        Height = 24
+        CharCase = ecUpperCase
+        TabOrder = 13
+      end
+      object edtuf: TEdit
+        Left = 367
+        Top = 273
+        Width = 34
+        Height = 24
+        CharCase = ecUpperCase
+        TabOrder = 14
+      end
+      object edtemail: TEdit
+        Left = 407
+        Top = 273
+        Width = 313
+        Height = 24
+        CharCase = ecLowerCase
+        TabOrder = 15
+      end
+      object edtefr: TEdit
+        Left = 8
+        Top = 364
+        Width = 353
+        Height = 24
+        CharCase = ecUpperCase
+        TabOrder = 16
+      end
+      object edtsituacaocadastral: TEdit
+        Left = 367
+        Top = 318
+        Width = 353
+        Height = 24
+        CharCase = ecUpperCase
+        TabOrder = 17
+      end
+      object edtdatasitcadastral: TEdit
+        Left = 320
+        Top = 31
+        Width = 146
+        Height = 24
+        TabOrder = 18
+      end
+      object edtmotivo: TEdit
+        Left = 8
+        Top = 416
+        Width = 353
+        Height = 24
+        CharCase = ecUpperCase
+        TabOrder = 19
+      end
+      object edtsituacaoespecial: TEdit
+        Left = 367
+        Top = 370
+        Width = 353
+        Height = 24
+        CharCase = ecUpperCase
+        TabOrder = 20
+      end
+      object edtdatasitespecial: TEdit
+        Left = 472
+        Top = 31
+        Width = 154
+        Height = 24
+        TabOrder = 21
+      end
+      object edttelefone: TEdit
+        Left = 8
+        Top = 272
+        Width = 353
+        Height = 24
+        CharCase = ecUpperCase
+        TabOrder = 22
+      end
+    end
+  end
+end
